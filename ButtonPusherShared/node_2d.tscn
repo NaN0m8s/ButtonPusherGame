@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://2jny8u68f0s0"]
+
+[ext_resource type="Script" path="res://code.gd" id="1_2ok10"]
+[ext_resource type="Texture2D" uid="uid://ds6pvyu1h1ogt" path="res://Sprites/p1_button_down.png" id="2_ckt46"]
+[ext_resource type="Texture2D" uid="uid://dyfbb4o17tutc" path="res://Sprites/p1_button_up.png" id="3_oy5uu"]
+[ext_resource type="Texture2D" uid="uid://bos71l06yi6v1" path="res://Sprites/p2_button_up.png" id="4_txnnk"]
+[ext_resource type="Texture2D" uid="uid://bx2ut1r4cf08d" path="res://Sprites/p2_button_down.png" id="5_ofgov"]
+
+[node name="Match" type="Node2D"]
+script = ExtResource("1_2ok10")
+
+[node name="P1Sound1" type="AudioStreamPlayer2D" parent="."]
+
+[node name="P2Sound1" type="AudioStreamPlayer2D" parent="."]
+
+[node name="BGM00" type="AudioStreamPlayer2D" parent="."]
+
+[node name="P1ButtonDown" type="Sprite2D" parent="."]
+position = Vector2(306, 288)
+texture = ExtResource("2_ckt46")
+
+[node name="P1ButtonUp" type="Sprite2D" parent="."]
+position = Vector2(306, 288)
+texture = ExtResource("3_oy5uu")
+
+[node name="char-1Aanim" type="AnimatedSprite2D" parent="P1ButtonUp"]
+position = Vector2(244, 20)
+
+[node name="P2ButtonDown" type="Sprite2D" parent="."]
+position = Vector2(827, 283)
+texture = ExtResource("5_ofgov")
+
+[node name="P2ButtonUp" type="Sprite2D" parent="."]
+position = Vector2(827, 283)
+texture = ExtResource("4_txnnk")
